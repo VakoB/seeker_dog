@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    background-image: url(moviebg.webp);
+}
+
+@keyframes headingEntrance {
+    0% {
+        opacity: 0;
+        margin-left: 300px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+@keyframes logoEntrance {
+    0% {
+        opacity: 0;
+        margin-right: 50rem;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    animation: logoEntrance ease 1s;
+}
+.logo > img{
+    height: 60px;
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    background-color: black;
+    /* background-color:transparent; */
+    justify-content: space-between;
+    padding-block: 1rem;
+    align-items: center;
+    background-image: url(moviebg.webp);
+}
+nav > *{
+    margin-inline: 15rem;
+}
+
+.signUp {
+    width: 8rem;
+    height: 2rem;
+    background-color: red;
+    box-shadow: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.signUp:hover{
+    cursor: pointer;
+    background-color: rgb(201, 15, 15);
+}
+.p-heading {
+    font-size: 30px;
+    animation: headingEntrance ease 1s;
+}
+
+.p-description {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+
+.start-button > button{
+    font-size: 20px;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color: white;
+    transition: 1s;
+}
+
+
+
+.purpose {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 4em black;
+    padding-top: 270px;
+    padding-bottom: 200px;
+}
+
+.start-button> button:hover {
+    cursor: pointer;
+    background-color: rgb(201, 15, 15);
+}
+
+@media screen and (max-width: 600px){
+    nav {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-top: 30px;
+    }
+
+    .signUp {
+        margin-top: 25px;
+    }
+}
