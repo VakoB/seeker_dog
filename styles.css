@@ -5,11 +5,19 @@
     font-family: "Poppins", sans-serif;
 }
 
-html {
+.container {
     background-image: url(moviebg.webp);
+    background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),
+        /* bottom, image */
+        url(moviebg.webp);
 }
 
-@keyframes headingEntrance {
+@keyframes rightToLeft {
     0% {
         opacity: 0;
         margin-left: 300px;
@@ -19,7 +27,7 @@ html {
         margin-left: 0;
     }
 }
-@keyframes logoEntrance {
+@keyframes leftToRight {
     0% {
         opacity: 0;
         margin-right: 50rem;
@@ -30,7 +38,7 @@ html {
 }
 
 .logo {
-    animation: logoEntrance ease 1s;
+    animation: leftToRight ease 1s;
 }
 .logo > img{
     height: 60px;
@@ -40,13 +48,18 @@ nav {
     display: flex;
     background-color: black;
     /* background-color:transparent; */
-    justify-content: space-between;
+    justify-content: space-around;
     padding-block: 1rem;
     align-items: center;
     background-image: url(moviebg.webp);
-}
-nav > *{
-    margin-inline: 15rem;
+    background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),
+        /* bottom, image */
+        url(moviebg.webp);
 }
 
 .signUp {
@@ -66,13 +79,14 @@ nav > *{
 }
 .p-heading {
     font-size: 30px;
-    animation: headingEntrance ease 1s;
+    animation: rightToLeft ease 1s;
 }
 
 .p-description {
     font-size: 20px;
     margin-top: 8px;
     margin-bottom: 10px;
+    animation: leftToRight ease 1s;
 }
 
 
@@ -85,6 +99,7 @@ nav > *{
     background-color: red;
     color: white;
     transition: 1s;
+    animation: leftToRight ease 1s;
 }
 
 
@@ -116,5 +131,7 @@ nav > *{
 
     .signUp {
         margin-top: 25px;
+        animation: rightToLeft ease 1s;
     }
+
 }
